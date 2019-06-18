@@ -1,0 +1,10 @@
+---
+
+- name: TITRE DE LA TACHE
+  template:
+    src: role_exemple.j2
+    dest: "{{ configs_dir }}/{{ inventory_hostname }}/role_exemple.cfg"
+
+- name: ENVOI DES COMMANDES
+  ios_config:
+    src: "{{ configs_dir }}/{{ inventory_hostname }}/role_exemple.cfg"
